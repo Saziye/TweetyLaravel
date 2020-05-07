@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tweet extends Model
 {
+    use Linkable;
     protected $guarded = [];
     
     //db ile tweet ve user tabloları arası ilişki kur
@@ -14,5 +15,6 @@ class Tweet extends Model
         return $this -> belongsTo(User::class);
     }
 
+    
 
 }
